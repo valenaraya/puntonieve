@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Punto Nieve</title>
+</head>
+<body>
+    <div class="container-form register">
+        <div class="information">
+            <div class="info-childs">
+                <h2>Bienvenido/a</h2>
+                <p>Para formar parte de nuestra comunidad y puedas elegir con mayor satisfaccion tus postres favoritos por favor Inicie Sesión con sus datos.</p>
+                <input type="button" value="Iniciar Sesión" id="sign-in">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Crear una cuenta</h2>
+                <div class="icons">
+                    <i class='bx bxl-google'></i>
+                    <i class='bx bxl-instagram-alt'></i>
+                    <i class='bx bxl-tiktok' ></i>
+                </div>
+                <p>O usa tu email para registrarte</p>
+                <form class="form">
+                    <label>
+                        <i class='bx bx-user' ></i>
+                        <input type="text" placeholder="Nombre Completo" name="nombre" id="name">
+                    </label>
+                    <label>
+                        <i class='bx bx-envelope' ></i>
+                        <input type="email" placeholder="Correo Electrónico" name="email" id="email">
+                    </label>
+                    <label>
+                        <i class='bx bx-lock-alt' ></i>
+                        <input type="password" placeholder="Contraseña" name="password" id="password">
+                    </label>
+                    <input type="submit" value="registrarte">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-form login hide">
+        <div class="information">
+            <div class="info-childs">
+                <h2>Bienvenido/a Nuevamente</h2>
+                <p>Para formar parte de nuestra comunidad y puedas elegir con mayor satisfaccion tus postres favoritos por favor Inicie Sesión con sus datos.</p>
+                <input type="button" value="Registrarse" id="sign-up">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Iniciar Sesión</h2>
+                <div class="icons">
+                    <i class='bx bxl-google'></i>
+                    <i class='bx bxl-instagram-alt'></i>
+                    <i class='bx bxl-tiktok' ></i>
+                </div>
+                <p>O Iniciar Sesión con una cuenta</p>
+                <form class="form">
+                    <label>
+                        <i class='bx bx-envelope' ></i>
+                        <input type="email" placeholder="Correo Electronico" id="mail">
+                    </label>
+                    <label>
+                        <i class='bx bx-lock-alt' ></i>
+                        <input type="password" placeholder="Contraseña" id="clave">
+                    </label>
+                    <input type="submit" value="Iniciar Sesión">
+                </form>
+            </div>
+        </div>
+    </div>
+    <p class="notify check_notify">¡Te registraste Correctamente!</p>
+    <p class="notify error_notify">¡Ups! Ocurrio un error, verifica tus datos</p>
+    <footer class="footer container"> 
+        <div class="link">
+            <h3 class="mx-auto justify-content-center" style="width:150px">Copyright©2023PuntoNieve</h3>
+            <div class="d-flex">
+            <ul>
+                <li><a href="https://www.instagram.com/puntonieve.al/"><img src="../Imagenes/bxl-instagram.svg" alt=""></a></li>
+                <li><a href="https://www.tiktok.com/@puntonieve2?_t=8ahrQQ5CH4P&_r=1&fbclid=PAAab9nLLY70I5iqY6vPN1vQKgm4TfGVCltt42kufPpUpZuIrKvP2PAbso27c"><img src="../Imagenes/bxl-tiktok.svg" alt=""></a></li>
+            </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/inicio.js"></script>
+</body>
+</html>
