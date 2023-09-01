@@ -1,3 +1,6 @@
+const { url } = require("inspector")
+const { stubFalse } = require("lodash")
+
 const btnSignIn = document.getElementById('sign-in')
 const btmSignUp = document.getElementById('sign-up')
 const formRegister =document.querySelector('.register')
@@ -64,7 +67,6 @@ formulario.addEventListener('submit', e => {
     if(campos.name && campos.email && campos.password){
         document.querySelector('.check_notify').classList.add('active');
         document.querySelector('.error_notify').classList.remove('active');
-
         setTimeout(() => {
             document.querySelector('.check_notify').classList.remove('active');
         }, 5000);
@@ -76,3 +78,57 @@ formulario.addEventListener('submit', e => {
         }, 7000);
     }
 })
+
+$("#formSubmitRegister").on("submit" , data => {
+    let name = data.target[0].value
+    if(name == ""){
+        return false
+    }
+    let email = data.target[1].value
+    if(email == "") {
+        return false
+    }
+    let password = data.target[1].value
+    if(password == "") {
+        return false
+    }
+    if(true) {
+        let dataUser = {
+            email: email,
+            password: password
+        }
+        register(dataUser)
+    }
+})
+$("#formSubmitLogin").on("submit" , data =>{
+    console.log(data.target[0].value)
+    let email = data.target[0].value
+    if(email == ""){
+        return false
+    }
+    let password = data.target[1].value
+    if(password == "") {
+        return false
+    }
+    if(true) {
+        let dataUser = {
+            email: email,
+            password: password
+        }
+        login(dataUser)
+    }
+})
+function login (data) {
+    $.ajax({
+        method: "POST",
+        url: "https://reqres.in/api/login",
+        data: data,
+    })
+}
+function register (data) {
+    $.ajax({
+        method: "POST",
+        url: "https://reqres.in/api/register",
+        data: data,
+    })
+}

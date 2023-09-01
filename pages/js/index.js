@@ -68,7 +68,6 @@ function vaciarCarrito() {
     while(lista.firstChild) {
         lista.removeChild(lista.firstChild);
     }
-    return false;
+    return false
 }
-
 

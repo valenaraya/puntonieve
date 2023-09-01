@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./estilos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,6 +14,7 @@
     <title>Punto Nieve</title>
 </head>
 <body>
+    <div class="container-header-navigation-form">
     <div class="container-form register">
         <div class="information">
             <div class="info-childs">
@@ -26,22 +28,22 @@
                 <h2>Crear una cuenta</h2>
                 <div class="icons">
                     <i class='bx bxl-google'></i>
-                    <i class='bx bxl-instagram-alt'></i>
-                    <i class='bx bxl-tiktok' ></i>
+                    <a href="https://www.instagram.com/puntonieve.al/"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="https://www.tiktok.com/@puntonieve2?_t=8ahrQQ5CH4P&_r=1&fbclid=PAAab9nLLY70I5iqY6vPN1vQKgm4TfGVCltt42kufPpUpZuIrKvP2PAbso27c"><i class='bx bxl-tiktok' ></i></a>
                 </div>
                 <p>O usa tu email para registrarte</p>
-                <form class="form">
+                <form class="form" id="formSubmitRegister" method="POST">
                     <label>
                         <i class='bx bx-user' ></i>
-                        <input type="text" placeholder="Nombre Completo" name="nombre" id="name">
+                        <input type="text" placeholder="Nombre Completo" name="nombre" id="name" required>
                     </label>
                     <label>
                         <i class='bx bx-envelope' ></i>
-                        <input type="email" placeholder="Correo Electrónico" name="email" id="email">
+                        <input type="email" placeholder="Correo Electrónico" name="email" id="email" required>
                     </label>
                     <label>
                         <i class='bx bx-lock-alt' ></i>
-                        <input type="password" placeholder="Contraseña" name="password" id="password">
+                        <input type="password" placeholder="Contraseña" name="password" id="password" required>
                     </label>
                     <input type="submit" value="registrarte">
                 </form>
@@ -68,26 +70,27 @@
                     <i class='bx bxl-tiktok' ></i>
                 </div>
                 <p>O Iniciar Sesión con una cuenta</p>
-                <form class="form">
+                <form class="form" id="formSubmitLogin" method="POST">
                     <label>
                         <i class='bx bx-envelope' ></i>
-                        <input type="email" placeholder="Correo Electronico" id="mail">
+                        <input type="email" placeholder="Correo Electronico" id="email" required>
                     </label>
                     <label>
                         <i class='bx bx-lock-alt' ></i>
-                        <input type="password" placeholder="Contraseña" id="clave">
+                        <input type="password" placeholder="Contraseña" id="password" required>
                     </label>
                     <input type="submit" value="Iniciar Sesión">
                 </form>
             </div>
         </div>
     </div>
+</div>
     <p class="notify check_notify">¡Te registraste Correctamente!</p>
     <p class="notify error_notify">¡Ups! Ocurrio un error, verifica tus datos</p>
-    <footer class="footer container"> 
-        <div class="link">
-            <h3 class="mx-auto justify-content-center" style="width:150px">Copyright©2023PuntoNieve</h3>
-            <div class="d-flex">
+    <footer> 
+        <div>
+            <h3 class="h6">Copyright©2023PuntoNieve</h3>
+            <div>
             <ul>
                 <li><a href="https://www.instagram.com/puntonieve.al/"><img src="../Imagenes/bxl-instagram.svg" alt=""></a></li>
                 <li><a href="https://www.tiktok.com/@puntonieve2?_t=8ahrQQ5CH4P&_r=1&fbclid=PAAab9nLLY70I5iqY6vPN1vQKgm4TfGVCltt42kufPpUpZuIrKvP2PAbso27c"><img src="../Imagenes/bxl-tiktok.svg" alt=""></a></li>
